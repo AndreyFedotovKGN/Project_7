@@ -25,7 +25,7 @@ public class Main {
 //В качестве строки с исходными данными используйте строку fullName.
 //Результат программы выведите в консоль в формате: ”Данные ФИО сотрудника для заполнения отчета — …”
         System.out.println("Задание 2");
-        String fullName = lastName.toUpperCase() + " " + firstName.toUpperCase() + " " + middleName.toUpperCase();
+        String fullName = (lastName + " " + firstName + " " + middleName).toUpperCase();
         System.out.print("Данные ФИО сотрудника для заполнения отчета — " + fullName + "\n");
  //### **Задание 3**
 //Система, в которой мы работаем, не принимает символ “ё”.
@@ -68,9 +68,9 @@ public class Main {
         String newFullName = "ivanov ivan ivanovich";
         int a = newFullName.indexOf(" ");
         int b = newFullName.lastIndexOf(" ");
-        String newFirstName = newFullName.substring(0,1).toUpperCase() + newFullName.substring(1,a);
-        String newMiddleName = newFullName.substring(a+1,a+2).toUpperCase() + newFullName.substring(a+2,b);
-        String newLastName = newFullName.substring(b + 1, b + 2).toUpperCase() + newFullName.substring(b + 2, newFullName.length());
+        String newFirstName = newFullName.substring(0,1).toUpperCase() + newFullName.substring(1,a).toLowerCase();
+        String newMiddleName = newFullName.substring(a+1,a+2).toUpperCase() + newFullName.substring(a+2,b).toLowerCase();
+        String newLastName = newFullName.substring(b + 1, b + 2).toUpperCase() + newFullName.substring(b + 2, newFullName.length()).toLowerCase();
         String correctName = (newFirstName + " " + newMiddleName + " " + newLastName);
         System.out.println("Верное написание Ф. И. О. сотрудника с заглавных букв — " + correctName);
 
